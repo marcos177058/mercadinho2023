@@ -41,6 +41,7 @@ def cadastrar_fornecedor():
 def ver_fornecedores_cadastrados():
     fornecedores_window = tk.Toplevel(root)
     fornecedores_window.title("Fornecedores Cadastrados")
+    fornecedores_window.geometry("800x600")
 
     # Criando um widget de lista para exibir os fornecedores
     fornecedores_listbox = tk.Listbox(fornecedores_window, width=100)
@@ -58,7 +59,8 @@ def ver_fornecedores_cadastrados():
 def abrir_gerenciar_fornecedores():
     gerenciar_fornecedores_window = tk.Toplevel(root)
     gerenciar_fornecedores_window.title("Gerenciamento de Fornecedores")
-
+    gerenciar_fornecedores_window.geometry("800x600")
+    
     global nome_entry, endereco_entry, contato_entry
 
     # Criando os widgets da interface de gerenciamento de fornecedores
