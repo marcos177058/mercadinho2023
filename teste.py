@@ -16,6 +16,16 @@ cursor.execute('''
     )
 ''')
 
+# Criando a janela principal
+root = tk.Tk()
+root.title("Tela Principal")
+root.geometry("800x600")
+
+# Variáveis globais para os campos de entrada
+nome_entry = None
+endereco_entry = None
+contato_entry = None
+
 # Função para cadastrar um fornecedor
 def cadastrar_fornecedor():
     nome = nome_entry.get()
@@ -31,7 +41,6 @@ def cadastrar_fornecedor():
 def ver_fornecedores_cadastrados():
     fornecedores_window = tk.Toplevel(root)
     fornecedores_window.title("Fornecedores Cadastrados")
-    fornecedores_window.geometry("800x600")
 
     # Criando um widget de lista para exibir os fornecedores
     fornecedores_listbox = tk.Listbox(fornecedores_window, width=100)
@@ -49,7 +58,8 @@ def ver_fornecedores_cadastrados():
 def abrir_gerenciar_fornecedores():
     gerenciar_fornecedores_window = tk.Toplevel(root)
     gerenciar_fornecedores_window.title("Gerenciamento de Fornecedores")
-    gerenciar_fornecedores_window.geometry("800x600")
+
+    global nome_entry, endereco_entry, contato_entry
 
     # Criando os widgets da interface de gerenciamento de fornecedores
     nome_label = tk.Label(gerenciar_fornecedores_window, text="Nome:")
@@ -76,11 +86,6 @@ def abrir_gerenciar_fornecedores():
     # Botão para voltar à tela principal
     voltar_button = tk.Button(gerenciar_fornecedores_window, text="Voltar", command=gerenciar_fornecedores_window.destroy)
     voltar_button.pack()
-
-# Criando a janela principal
-root = tk.Tk()
-root.title("Tela Principal")
-root.geometry("800x600")
 
 # Botão para acessar o gerenciamento de fornecedores
 gerenciar_fornecedores_button = tk.Button(root, text="Gerenciar Fornecedores", command=abrir_gerenciar_fornecedores)
