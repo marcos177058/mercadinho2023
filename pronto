@@ -154,13 +154,16 @@ def abrir_visualizar_estoque():
         quantidade_caixas = estoque[3]
         quantidade_unidades = estoque[4]
         quantidade_total = quantidade_caixas * quantidade_unidades
-        valor_unitario = estoque[6]
+        valor_unitario = estoque[5]
         valor_total = valor_unitario * quantidade_total
 
         estoque_completo = (*estoque[:3], quantidade_caixas, quantidade_unidades, quantidade_total, valor_unitario, valor_total, *estoque[7:])
         tree.insert("", "end", values=estoque_completo)
 
     visualizar_estoque_window.mainloop()
+
+
+
 
 
 # Função para abrir a janela de cadastro de produtos
