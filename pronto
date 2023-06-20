@@ -70,6 +70,7 @@ def cadastrar_fornecedor():
 def ver_fornecedores_cadastrados():
     fornecedores_window = tk.Toplevel(root)
     fornecedores_window.title("Fornecedores Cadastrados")
+    fornecedores_window.geometry("800x600")
 
     # Criando um widget de lista para exibir os fornecedores
     fornecedores_listbox = tk.Listbox(fornecedores_window, width=100)
@@ -98,6 +99,7 @@ def cadastrar_produto():
 def gerenciar_produtos():
     gerenciar_produtos_window = tk.Toplevel(root)
     gerenciar_produtos_window.title("Gerenciamento de Produtos")
+    gerenciar_produtos_window.geometry("800x600")
 
     # Criando um widget de lista para exibir os produtos
     produtos_listbox = tk.Listbox(gerenciar_produtos_window, width=100)
@@ -170,6 +172,7 @@ def abrir_visualizar_estoque():
 def abrir_cadastro_produtos():
     cadastro_produtos_window = tk.Toplevel(root)
     cadastro_produtos_window.title("Cadastro de Produtos")
+    cadastro_produtos_window.geometry("800x600")
 
     global nome_produto_entry, categoria_entry, codigo_barras_entry
 
@@ -216,6 +219,7 @@ def obter_fornecedores_cadastrados():
 def abrir_criacao_estoque():
     criacao_estoque_window = tk.Toplevel(root)
     criacao_estoque_window.title("Criação de Estoque")
+    criacao_estoque_window.geometry("800x600")
 
     global produto_combobox, fornecedor_combobox, quantidade_caixas_entry, quantidade_unidades_entry, valor_venda_unitario_entry
 
@@ -256,6 +260,7 @@ def abrir_criacao_estoque():
 def abrir_cadastro_fornecedores():
     cadastro_fornecedores_window = tk.Toplevel(root)
     cadastro_fornecedores_window.title("Cadastro de Fornecedores")
+    cadastro_fornecedores_window.geometry("800x600")
 
     global nome_entry, endereco_entry, contato_entry
 
